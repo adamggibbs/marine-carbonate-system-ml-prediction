@@ -103,3 +103,28 @@ If any error occurs, first try restarting the runtime by navigating to the toolb
 
 ## Quick Start - Making Estimations
 
+# Model Estimation
+To use the models trained, us the [model_estimations.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/model_estimations.ipynb) notebook. This notebook uses a defined TensorFlow model to estimate a specified output variable from specified input variables. The notebook will take in an arbitrary number of data files, make estimations, and add the estimations to the data files as a new column, and save a new data file with the estimations.
+
+**Directions:**
+
+1. Place data files to make estimations from in the `to_estimate` directory.
+> **Note:** Ensure all data files are of the same file format (`.csv` or `.txt`), contain data of the specified data format, and each contains all the input variables for the model you are using. 
+2. Define the necessary user defined varibales.
+> **Note:** More details on the necessary user defined variables are in the cell below in this notebook. Also, see the [variables section](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/development_README.md#variables) of  development_README.md in the GitHub repository for information on varibales.
+3. Run this notebook by navigating to the toolbar and selecting `Runtime -> Run all` or using `ctrl+F9`
+4. When prompted, allow access to your Google Drive account by selecting **Connect to Google Drive**, then clicking on the Google Drive account you wish to use, and finally selecting **Continue** to finalize access.
+> This allows only this specific Google Colab notebook to access your Google Drive files and will disconnect when the notebook is closed or a certain amount of idle time has passed.
+5. When complete this notebook will have made estimations and saved all data files in the `estimations` directory.
+```
+# data files with estimations
+/My Drive/root_dir/data/estimations/estimated_my_data_file1.csv
+/My Drive/root_dir/data/estimations/estimated_my_data_file2.csv
+...
+```
+Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting--estimations) section for help.
+> **Note:** All original data files will remain in the `to_estimate` directory and will be untouched. Those files are treated as read-only. The estimated data files in the `estimations` directory will be copies of the data files in the `to_estimate` directory with the one estimated column appeneded to it.
+6. Use the estimations for anything you need!  
+
+## Troubleshooting - Estimations
+More to come...
