@@ -62,11 +62,11 @@ To train a neural for a desired estimation task, the [NN_development_framework.i
 
 1. Choose a location within your Google Drive to store all data and models
 2. Run the [directory_setup.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/directory_setup.ipynb) Colab notebook to create the necessary directory structure for this notebook to run.
-3. Place all training files you want to use for training in the **training directory** found under your **root directory**.
+3. Place all training files you want to use for training in the `training` directory found under your `root` directory.
 ```
 /My Drive/root_dir/data/training/
 ```
-4. Place all training files you want to use for training in the **testing directory** found under your **root directory**.
+4. Place all training files you want to use for training in the `testing` directory found under your `root` directory.
 ```
 /My Drive/root_dir/data/testing/
 ```
@@ -75,9 +75,9 @@ To train a neural for a desired estimation task, the [NN_development_framework.i
 **Before running this notebook:**
 
 5.   Define all necessary user defined variables.
-> **Note:** More details on the necessary user defined variables are in the cell below in this notebook and in `development_README.md` in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
+> **Note:** More details on the necessary user defined variables are in the cell below in this notebook and in [development_README.md](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/development_README.md) in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
 6.   Define any optional user defined variables.
-> **Note:** More details on optional user defined variables in `development_README.md` in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
+> **Note:** More details on optional user defined variables in [development_README.md](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/development_README.md) in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
 
 **Running this notebook:**
 
