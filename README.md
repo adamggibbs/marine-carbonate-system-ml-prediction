@@ -38,7 +38,7 @@ These following steps will help you set up the necessary directory structure to 
 3. Run this notebook by navigating to the toolbar and selecting `Runtime -> Run all` or using `ctrl+F9`
 4. When prompted, allow access to your Google Drive account by selecting **Connect to Google Drive**, then clicking on the Google Drive account you wish to use, and finally selecting **Continue** to finalize access.
   * This allows only this specific Google Colab notebook to access your Google Drive files and will disconnect when the notebook is closed or a certain amount of idle time has passed.
-5. The directory structure should be set up. Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting) section for help.
+5. The directory structure should be set up. Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting---directory-setup) section for help.
 
 #### Troubleshooting - Directory Setup
 If any error occurs, first try restarting the runtime by navigating to the toolbar and selecting `Runtime -> Factory reset runtime`. If this does not work, make sure you properly typed in the path to the desired directory location in `root_dir_path`. If neither of these helps, then manually create the file structure using the picture below as reference.  
@@ -93,7 +93,7 @@ To train a neural for a desired estimation task, the [NN_development_framework.i
 # HDF5 data format
 /My Drive/root_dir/models/model_name_Layers(...).h5
 ```
-Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting) section for help.
+Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting---training) section for help.
 > **Note:** Depending on the size of training and testing files and size of the neural network, this notebook can take over **1 hour to run and fully complete**. You can ensure progress is being made by following the logs produced by each cell in the notebook and the status bar at the bottom of the notebook. 
 10. Check the performance of the neural network by analyzing the error metrics and figures in the notebook. Reference the [development_README.md](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/development_README.md) file for mroe information on training a good model. Repeat preceding steps until you have a model with satisfactory performance before proceeding to step 11. 
 11. Your model is now ready to use. To use the model to make estimations for your output variable with any data file file, use the [model_estimations.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/model_estimations.ipynb) notebook. This notebook will allow you to make estimations using any model you've trained on any data file in the specified format and add those estimations as a column to the data file. 
