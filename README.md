@@ -6,6 +6,7 @@
 The objective of this project is to extend on the work of Bitting et al (2018) which developed a neural network to estimate parameters of the marine carbonate system from date, location, temperature, pressure, salinity, and oxygen. We sought to develop a framework that allowed us to train a neural network to estimate these parameters with less error than the global algorithm produced by Bittig et al. Here we've developed a framework that any researcher to develop a neural network that estimates a specified target variable from specified target inputs given data from standardized data files. The overall motivation is to make the benefits of machine learning accessible to researchers studying ocean chemistry. 
 
 ## Table of Contents
+1. [Data](#data)
 1. [Files in the Repository](#files-in-the-repository)
 2. [Getting Started - Setting Up](#getting-started---setting-up)
 3. [Quick Start - Training](#quick-start---training)
@@ -23,6 +24,9 @@ The objective of this project is to extend on the work of Bitting et al (2018) w
   - This notebook will perform quality control checks on certain parameters as specified in the data_qc_README.md. This file performs quality checks on data placed in the quality_check directory and the output files can be placed in the training or testing directories to be used in developing a new model.
 - **Segmented Files Directory**
   - This directory contains the individual Google Colab notebooks that were combined to make the larger notebook - NN_Development_Framework.ipynb.   
+
+## Data
+
 
 ## Getting Started - Setting Up
 To run these notebooks a specific file structure is necessary. The directory_setup.ipynb notebook can be run to set up the exact structure necessary in your Google Drive to run the rest of the files. 
@@ -48,6 +52,9 @@ root_dir_path = 'Research/pH Estimation Framework'
 ``` 
 and then run the notebook by navigating to the toolbar and selecting `Runtime -> Run all` or using `ctrl+F9`.
 
+
 ## Quick Start - Training
 
+
 ## Quick Start - Making Estimations
+
