@@ -28,7 +28,7 @@ The objective of this project is to extend on the work of Bitting et al (2018) w
 To run these notebooks a specific file structure is necessary. The directory_setup.ipynb notebook can be run to set up the exact structure necessary in your Google Drive to run the rest of the files. 
 
 #### Instructions
-These following steps will help you set up the necessary directory structure to train your own neural network using our framework. This notebook will run as if off GitHub with an example location currently hardcoded in. Also see this [example](#example) on how to use this notebook.
+These following steps will help you set up the necessary directory structure to train your own neural network using our framework. This notebook can be run as it is written when downloaded off GitHub with an example location presently hardcoded in. Also see this [example](#example) on how to use this notebook.
 1. Go to your Google Drive and decide where you want all the files to be stored
 2. Store the path to that folder location in the variable **root_dir_path**.
   * This path begins from the My Drive section of your Google Drive. **root_dir_path** gets appended to the end 'content/drive/My Drive/' 
