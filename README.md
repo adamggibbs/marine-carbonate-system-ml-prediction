@@ -98,7 +98,7 @@ Check your Google Drive to confirm. If the notebook does not work or throws an e
 10. Check the performance of the neural network by analyzing the error metrics and figures in the notebook. Reference the [development_README.md](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/development_README.md) file for mroe information on training a good model. Repeat preceding steps until you have a model with satisfactory performance before proceeding to step 11. 
 11. Your model is now ready to use. To use the model to make estimations for your output variable with any data file file, use the [model_estimations.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/model_estimations.ipynb) notebook. This notebook will allow you to make estimations using any model you've trained on any data file in the specified format and add those estimations as a column to the data file. 
 
-#### Troubleshooting-Training
+#### Troubleshooting - Training
 If any error occurs, first try restarting the runtime by navigating to the toolbar and selecting `Runtime -> Factory reset runtime`. More info to be added...
 
 ## Quick Start - Making Estimations
