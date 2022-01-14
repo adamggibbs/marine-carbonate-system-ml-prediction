@@ -6,10 +6,10 @@
 The objective of this project is to extend on the work of Bitting et al (2018) which developed a neural network to estimate parameters of the marine carbonate system from date, location, temperature, pressure, salinity, and oxygen. We sought to develop a framework that allowed us to train a neural network to estimate these parameters with less error than the global algorithm produced by Bittig et al. Here we've developed a framework that any researcher to develop a neural network that estimates a specified target variable from specified target inputs given data from standardized data files. The overall motivation is to make the benefits of machine learning accessible to researchers studying ocean chemistry. 
 
 ## Table of Contents
-1. [Files in the Repository](## Files in the Repository)
-2. [Getting Started - Setting Up](## Getting Started - Setting Up)
-3. [Quick Start - Training](## Quick Start - Training)
-4. [Quick Start - Making Estimations](## Quick Start - Making Estimations](## Quick Start - Making Estimations)
+1. [Files in the Repository](#files-in-the-repository)
+2. [Getting Started - Setting Up](#-getting-started-setting-up)
+3. [Quick Start - Training](#-quick-start-training)
+4. [Quick Start - Making Estimations](#quick-start-making-estimations)
 
 ## Files in the Repository
 - NN_Development_Framework.ipynb
