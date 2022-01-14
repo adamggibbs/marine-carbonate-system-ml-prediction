@@ -6,17 +6,17 @@
 The objective of this project is to extend on the work of Bitting et al (2018) which developed a neural network to estimate parameters of the marine carbonate system from date, location, temperature, pressure, salinity, and oxygen. We sought to develop a framework that allowed us to train a neural network to estimate these parameters with less error than the global algorithm produced by Bittig et al. Here we've developed a framework that any researcher to develop a neural network that estimates a specified target variable from specified target inputs given data from standardized data files. The overall motivation is to make the benefits of machine learning accessible to researchers studying ocean chemistry. 
 
 ## Table of Contents
-1. [Data](#data)
 1. [Files in the Repository](#files-in-the-repository)
-2. [Getting Started - Setting Up](#getting-started---setting-up)
-3. [Quick Start - Training](#quick-start---training)
-4. [Quick Start - Making Estimations](#quick-start---making-estimations)
+2. [Data](#data)
+3. [Getting Started - Setting Up](#getting-started---setting-up)
+4. [Quick Start - Training](#quick-start---training)
+5. [Quick Start - Making Estimations](#quick-start---making-estimations)
 
 ## Files in the Repository
-- **NN_Development_Framework.ipynb**
+- **NN_development_framework.ipynb**
   - This is the main file of the repository. This file reads in training data, trains a model with specified inputs and outputs, and evaluates the model on given testing data.
   - More thorough README given with development_README.md
-- **Model_Estimations.ipynb**
+- **model_estimations.ipynb**
   - This file uses an already trained neural network (specified by the user) to add estimations to existing data files. The notebook will add a column to the existing data files with estimations for the specified output variable and save the new data file as a different file.  
 - **directory_setup.ipynb**
   - The framework requires a specific directory structure to store data, models, and figures. This notebook sets up that directory structure at a specified location in your Google Drive.
@@ -24,8 +24,6 @@ The objective of this project is to extend on the work of Bitting et al (2018) w
   - This notebook will perform quality control checks on certain parameters as specified in the data_qc_README.md. This file performs quality checks on data placed in the quality_check directory and the output files can be placed in the training or testing directories to be used in developing a new model.
 - **Segmented Files Directory**
   - This directory contains the individual Google Colab notebooks that were combined to make the larger notebook - NN_Development_Framework.ipynb.   
-
-## Data
 
 
 ## Getting Started - Setting Up
@@ -53,8 +51,51 @@ root_dir_path = 'Research/pH Estimation Framework'
 and then run the notebook by navigating to the toolbar and selecting `Runtime -> Run all` or using `ctrl+F9`.
 
 
-## Quick Start - Training
+## Data
 
+
+## Quick Start - Training 
+To train a neural for a desired estimation task, the [NN_development_framework.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/NN_development_framework.ipynb) notebook is used. This notebook contains a framework to train and test a neural network to estimate any ocean parameter from other specified ocean parameters given a data file in a standard oceanographic format referenced throughout these instructions (see the [data section](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/README.md#data) for more info). The data used must be in the specified format and quality checked prior to using this notebook. Quick start intructions are below and more detailed instructions can be found in the development_README.md file within the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction). 
+
+## Instructions
+**Before using this notebook:**
+
+1. Choose a location within your Google Drive to store all data and models
+2. Run the [directory_setup.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/directory_setup.ipynb) Colab notebook to create the necessary directory structure for this notebook to run.
+3. Place all training files you want to use for training in the **training directory** found under your **root directory**.
+```
+/My Drive/root_dir/data/training/
+```
+4. Place all training files you want to use for training in the **testing directory** found under your **root directory**.
+```
+/My Drive/root_dir/data/testing/
+```
+> **Note:** Training and testing files should be independent such that any data in the testing files should not be in the training files. 
+
+**Before running this notebook:**
+
+5.   Define all necessary user defined variables.
+> **Note:** More details on the necessary user defined variables are in the cell below in this notebook and in `development_README.md` in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
+6.   Define any optional user defined variables.
+> **Note:** More details on optional user defined variables in `development_README.md` in the [GitHub repository](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction).
+
+**Running this notebook:**
+
+> **Note:** Ensure all necessary user defined variables are properly defined and data files in the proper format are uploaded in the training and testing directories
+
+7. Run this notebook by navigating to the toolbar and selecting `Runtime -> Run all` or using `ctrl+F9`
+8. When prompted, allow access to your Google Drive account by selecting **Connect to Google Drive**, then clicking on the Google Drive account you wish to use, and finally selecting **Continue** to finalize access.
+> This allows only this specific Google Colab notebook to access your Google Drive files and will disconnect when the notebook is closed or a certain amount of idle time has passed.
+9. The directory structure should be set up. Check your Google Drive to confirm. If the notebook does not work or throws an error, see the [Troubleshooting](#troubleshooting) section for help.
+> Depending on the size of training and testing files and size of the neural network, this notebook can take over **1 hour to run and fully complete**. You can ensure progress is being made by following the logs produced by each cell in the notebook and the status bar at the bottom of the notebook. 
+10. When complete this notebook will have trained and saved a neural network model directory:
+```
+#tensorflow data format
+/My Drive/root_dir/models/model_name_Layers(...)/ 
+# HDF5 data format
+/My Drive/root_dir/models/model_name_Layers(...).h5
+```
+> To use the model to make estimations for your output variable with any data file file, use the [model_estimations.ipynb](https://github.com/adamggibbs/marine-carbonate-system-ml-prediction/blob/master/model_estimations.ipynb) notebook. This notebook will allow you to make estimations using any model you've trained on any data file in the specified format and add those estimations as a column to the data file. 
 
 ## Quick Start - Making Estimations
 
