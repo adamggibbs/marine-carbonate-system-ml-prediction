@@ -7,7 +7,7 @@ The objective of this project is to extend on the work of Bitting et al (2018) w
 
 ## Table of Contents
 1. [Files in the Repository](#files-in-the-repository)
-2. [Getting Started - Setting Up](#-getting-started-setting-up)
+2. [Getting Started - Setting Up](#-getting-started---setting-up)
 3. [Quick Start - Training](#-quick-start-training)
 4. [Quick Start - Making Estimations](#quick-start-making-estimations)
 
